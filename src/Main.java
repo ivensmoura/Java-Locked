@@ -18,7 +18,7 @@ public class Main {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             frame = new JFrame("Java Skills - Main Menu");
-            // We handle the close operation manually to decide whether to exit or go to menu.
+            // We handle the close operation manually to decide whether to exit or go to the menu.
             frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
             frame.setSize(800, 600);
 
@@ -81,7 +81,7 @@ public class Main {
         frame.repaint();
         currentPanel = newPanel;
 
-        // Start the minigame in the new panel if it exists
+        // Start the minigame in the new panel if it exists.
         // The minigame is a component of the newPanel
         for (Component comp : newPanel.getComponents()) {
             if (comp instanceof Minigame) {
@@ -121,10 +121,6 @@ public class Main {
         // Create a container panel that holds the skill panel and a back button
         JPanel containerPanel = new JPanel(new BorderLayout());
         containerPanel.add(skillPanel, BorderLayout.CENTER);
-
-        JButton backButton = new JButton("Back to Main Menu");
-        backButton.addActionListener(e -> showMainMenu());
-        containerPanel.add(backButton, BorderLayout.SOUTH);
 
         switchPanel(containerPanel);
     }
