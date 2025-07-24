@@ -17,7 +17,7 @@ public class GameClock {
     private final List<ScheduledTask> scheduledTasks;
 
     /**
-     * Represents a task that is scheduled to run at a specific tick interval.
+     * Represents a task scheduled to run at a specific tick interval.
      * This is a private inner class as it's only used by the GameClock.
      */
     private static class ScheduledTask {
